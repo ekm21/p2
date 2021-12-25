@@ -1,3 +1,16 @@
-.app {
-  text-align: center;
+.App {
+  border: red solid 5px;
 }
+
+.Todo {
+  border: blue solid 3px;
+}
+
+.Add {
+  border: green solid 3px;
+}
+
+.Todo span{
+  margin: 0px 10px 0px 10px;
+}
+
