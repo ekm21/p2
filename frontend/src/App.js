@@ -47,7 +47,7 @@ const postNewTodo=(body)=>{
 
 const deleteTodo = (id)=>{
   axios
-  .delete('http://localhost:5000/tasks/${id}')
+  .delete(`http://localhost:5000/tasks/${id}`)
   .then((response)=>{
 console.log("DATA: ",response.data)
 getData();
@@ -59,7 +59,7 @@ getData();
 
 const toggleTodo = (id, newStatus)=>{
   axios
-  .put('http://localhost:5000/tasks/${id}/${newStatus}')
+  .put(`http://localhost:5000/tasks/${id}/${newStatus}`)
   .then((response)=>{
 console.log("DATA: ",response.data)
 getData();
@@ -83,7 +83,7 @@ getData();
 
 const filterData = (status)=>{
   axios
-  .get('http://localhost:5000/filter?isCompleted=${status}')
+  .get(`http://localhost:5000/filter?isCompleted=${status}`)
   .then((response)=>{
 console.log("DATA: ",response.data)
 setTasks(response.data);
